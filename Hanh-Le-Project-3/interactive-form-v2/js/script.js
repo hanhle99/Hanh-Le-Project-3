@@ -3,6 +3,19 @@ Treehouse Techdegree:
 Hanh - Le - FSJS project 3 - Interactive Form 
 ******************************************/
 
+const jobRole = document.getElementById('title');
+// Hide job role other
+const other = document.getElementById('other-title');
+other.style.display = 'none';
+
+jobRole.addEventListener('change', (e) => {
+    if (jobRole.options[5].selected){
+        other.style.display = '';
+    } else {
+        other.style.display = 'none'
+    }
+});
+
 document.getElementById('name').focus();
 document.getElementById('other-title').style.display = 'none';
 const name = document.getElementById('name');
